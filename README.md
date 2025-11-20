@@ -40,3 +40,20 @@ The site is fully **mobile-responsive**, **fast**, and designed with clean moder
 
 ## 📁 **Project Structure**
 
+
+---
+
+## 🧪 **Live Preview**
+
+👉 **https://johnc-rod.github.io**
+
+---
+
+## 📬 Contact
+
+- **Email:** johnchristian.rodrigo@yahoo.com  
+- **LinkedIn:** https://www.linkedin.com/in/john-christian-a-rodrigo-bsmt-rmt-ascpi/  
+
+---
+
+Thank you for viewing my portfolio.
