@@ -1,5 +1,4 @@
-# JohnC-Rod.github.io
-Portfolio website for John Christian A. Rodrigo — Medical Laboratory Scientist (ASCPi), ISO 15189-ready, NZ AEWV applicant.
+
 # John Christian A. Rodrigo – Medical Laboratory Scientist (ASCPi)
 
 This repository contains the source code for my professional portfolio website:
