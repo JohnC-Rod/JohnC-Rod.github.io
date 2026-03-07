@@ -1,143 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Christian A. Rodrigo | Medical Laboratory Scientist</title>
+  <meta name="description" content="John Christian A. Rodrigo, BSMT, RMT, ASCPi — Provisionally Registered Medical Laboratory Scientist (MSCNZ) with 18+ years of diagnostic laboratory experience across Singapore and the Philippines." />
+  <style>
+    :root {
+      --navy: #123b63;
+      --blue: #1f5f99;
+      --teal: #2f8f9d;
+      --light: #f5f8fb;
+      --text: #1b2430;
+      --muted: #5b6b7a;
+      --white: #ffffff;
+      --border: #d8e1ea;
+      --shadow: 0 12px 30px rgba(18, 59, 99, 0.1);
+      --max: 1080px;
+    }
 
-  <meta charset="UTF-8">
-  <title>John Christian A. Rodrigo | Medical Laboratory Scientist (ASCPi)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ASCPi-certified Medical Laboratory Scientist with 10+ years across histopathology, microbiology, hematology & blood bank. ISO 15189 mindset. AEWV relocation-ready for New Zealand.">
-  <meta property="og:title" content="John C. Rodrigo — Medical Laboratory Scientist (ASCPi)">
-  <meta property="og:description" content="ISO 15189 quality, blood bank, hematology, microbiology — NZ-ready résumé.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="img/og-image.png">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(18,59,99,.97), rgba(31,95,153,.93)), url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1400&q=80') center/cover;
+      color: var(--white);
+      padding: 28px 0 72px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .95rem;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.92);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      font-size: .9rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.92);
+      margin: 0 0 18px;
+      max-width: 720px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0 28px;
+    }
+
+    .hero-meta span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: .92rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,.35);
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .card {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(6px);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
+    .section-subtitle {
+      margin: 0 0 28px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: #eef5fb;
+      border: 1px solid #d9e7f4;
+      font-size: .93rem;
+    }
+
+    .competency h3,
+    .exp-item h3,
+    .contact-box h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .competency p,
+    .exp-item p,
+    .contact-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .exp-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .exp-item {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .role {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .org {
+      font-weight: 700;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+    }
+
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 28px 0;
+    }
+
+    footer p {
+      margin: 0;
+      color: rgba(255,255,255,.88);
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header { padding-bottom: 52px; }
+      section { padding: 52px 0; }
+      .panel, .card, .exp-item { padding: 20px; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">John Christian A. Rodrigo</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#competencies">Competencies</a>
+          <a href="#experience">Experience</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
 
-<header class="header">
-  <div class="container head-flex">
-    <a class="logo" href="#home">JC Rodrigo <span class="tag">MLS (ASCPi)</span></a>
-    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link" href="#home">Home</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#experience">Experience</a></li>
-        <li><a class="nav-link" href="#skills">Skills</a></li>
-        <li><a class="nav-link" href="#certs">Certifications</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-        <li><a class="btn btn-outline nav-link" href="cv/John_Rodrigo_MedLab_NZ_Resume.pdf" download>Download CV</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <div class="hero">
+        <div>
+          <span class="eyebrow">Provisionally Registered – MSCNZ</span>
+          <h1>Medical Laboratory Scientist for New Zealand Opportunities</h1>
+          <p>John Christian A. Rodrigo, BSMT, RMT, ASCPi — over 18 years of diagnostic laboratory experience across tertiary hospitals and ISO 15189–accredited laboratories in Singapore and the Philippines.</p>
+          <div class="hero-meta">
+            <span>Histopathology</span>
+            <span>Haematology</span>
+            <span>ISO 15189 Quality Systems</span>
+            <span>Open to Relocation to New Zealand</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Contact John</a>
+            <a class="btn btn-secondary" href="John_Rodrigo_MLS_MSCNZ_CV.pdf" download>Download CV</a>
+          </div>
+        </div>
 
-<section id="home" class="hero">
-  <div class="container">
-    <h1>John Christian A. Rodrigo</h1>
-    <p class="tagline">Medical Laboratory Scientist <strong>(ASCPi)</strong> • ISO 15189 Quality</p>
-    <p class="sub-tagline">10+ years across histopathology, microbiology, hematology & blood bank. AEWV relocation-ready for Aotearoa / New Zealand.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#contact">Hire Me</a>
-      <a class="btn btn-outline" href="cv/John_Rodrigo_MedLab_NZ_Resume.pdf" download>Download CV</a>
+        <aside class="card">
+          <h3>Quick Profile</h3>
+          <p><strong>Name:</strong> John Christian A. Rodrigo</p>
+          <p><strong>Profession:</strong> Medical Laboratory Scientist</p>
+          <p><strong>Status:</strong> Provisionally Registered – Medical Sciences Council of New Zealand</p>
+          <p><strong>Location:</strong> Philippines</p>
+          <p><strong>Availability:</strong> Open to supervised practice positions in New Zealand</p>
+          <p><strong>Interview:</strong> Zoom or Microsoft Teams</p>
+        </aside>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="about" class="section container">
-  <h2>About</h2>
-  <p>I’m a Philippines-trained Medical Laboratory Scientist (UST, 2006) and ASCPi-certified MLS with a strong ISO 15189/17025 quality mindset. I’ve delivered accurate, timely diagnostics in tertiary hospitals and national diagnostics chains with strengths in <strong>histopathology, hematology, microbiology, blood bank</strong>, and <strong>clinical chemistry</strong>.</p>
-  <p>Relocating to New Zealand on the AEWV pathway and aligning to NZ practice and cultural safety expectations.</p>
-</section>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="section-subtitle">Aligned to your latest NZ-focused resume and written for recruiters, supervisors, and hiring managers reviewing your background for supervised practice roles.</p>
+      <div class="panel">
+        <p>Provisionally Registered Medical Laboratory Scientist with the Medical Sciences Council of New Zealand and over 18 years of diagnostic laboratory experience across tertiary hospitals and ISO 15189–accredited laboratories in Singapore and the Philippines.</p>
+        <p>Demonstrated competency in histopathology and haematology within tertiary and accredited laboratory environments, including tissue processing, paraffin embedding, microtomy, H&amp;E staining, peripheral blood film morphology review, coagulation testing, and automated analyser operation. Experienced in quality management systems, internal QC monitoring, EQA participation, and multidisciplinary clinical collaboration.</p>
+        <p>Committed to delivering safe, accurate, and culturally responsive diagnostic services aligned with Health New Zealand standards and Te Tiriti o Waitangi principles.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="experience" class="section container">
-  <h2>Experience</h2>
-  <ul class="timeline">
-    <li>
-      <h3>Clinical Strategy &amp; Content Advisor — ValuLife Healthcare Systems (Contract)</h3>
-  <span class="date">Jan 2026 – present</span>
-  <p>Philippines • Remote</p>
-  <p>Advising on clinical strategy and educational content focused on quality control, diagnostic workflows, and laboratory best practices.</p>
-  
-    </li>
-    <li>
-      <h3>Chemist — Setsco Services Pte Ltd, Singapore</h3>
-      <span class="date">Jan 2019 – Jul 2025</span>
-      <p>Analytical testing with ISO 17025 discipline; collaborated with quality on method validation and safety.</p>
-    </li>
-    <li>
-      <h3>Executive Clinical Laboratory Technologist — Setsco Services Pte Ltd, Singapore</h3>
-      <span class="date">May 2015 – Jul 2025</span>
-      <p>Led clinical lab initiatives; supervised reports and ensured accuracy/compliance across sections.</p>
-    </li>
-    <li>
-      <h3>Chief Medical Technologist — JAR Mednet Diagnostic Centre, Manila</h3>
-      <span class="date">Dec 2013 – May 2015</span>
-      <p>Managed daily ops across hematology, blood bank and histopathology; implemented quality indicators and staff training.</p>
-    </li>
-    <li>
-      <h3>Senior Medical Technologist — Hi-Precision Diagnostics, Quezon City</h3>
-      <span class="date">Jul 2011 – Dec 2013</span>
-      <p>Bench work and section lead (histopathology/QC); coached juniors; ensured reliable TATs.</p>
-    </li>
-    <li>
-      <h3>Medical Technologist — University of Santo Tomas Hospital, Manila</h3>
-      <span class="date">Jun 2007 – Jun 2011</span>
-      <p>Core bench: <strong>Blood Bank, Hematology, Clinical Chemistry, Microbiology</strong>, phlebotomy; supported physician queries.</p>
-    </li>
-  </ul>
-</section>
+  <section id="competencies">
+    <div class="container">
+      <h2 class="section-title">Core Competencies</h2>
+      <p class="section-subtitle">Key technical areas from the current CV, simplified for web presentation while preserving recruiter-friendly wording.</p>
+      <div class="grid-3">
+        <div class="panel competency">
+          <h3>Histopathology</h3>
+          <p>Tissue processing, paraffin embedding, microtomy, and routine H&amp;E staining.</p>
+        </div>
+        <div class="panel competency">
+          <h3>Haematology</h3>
+          <p>FBC, differential counts, coagulation testing, peripheral blood film review, and morphology assessment.</p>
+        </div>
+        <div class="panel competency">
+          <h3>Laboratory Quality</h3>
+          <p>ISO 15189 systems, internal QC, EQA participation, SOP compliance, audit support, and documentation.</p>
+        </div>
+      </div>
+      <div class="pill-list">
+        <span class="pill">Clinical Chemistry &amp; Automated Analysers</span>
+        <span class="pill">Laboratory Governance &amp; Audit Support</span>
+        <span class="pill">Multidisciplinary Clinical Communication</span>
+        <span class="pill">Specimen Integrity &amp; Patient Safety</span>
+        <span class="pill">Regional &amp; Tertiary Laboratory Adaptability</span>
+      </div>
+    </div>
+  </section>
 
-<section id="skills" class="section container">
-  <h2>Core Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">Histopathology</div>
-    <div class="skill-card">Hematology</div>
-    <div class="skill-card">Clinical Chemistry</div>
-    <div class="skill-card">Microbiology</div>
-    <div class="skill-card">Blood Bank</div>
-    <div class="skill-card">Phlebotomy</div>
-    <div class="skill-card">ISO 15189 • QA & QC</div>
-    <div class="skill-card">LIS & Data Analysis</div>
-  </div>
-</section>
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">Presented in the same order and professional tone as the updated resume.</p>
+      <div class="exp-list">
+        <article class="exp-item">
+          <div class="exp-top">
+            <div>
+              <div class="role">Senior Medical Laboratory Scientist</div>
+              <div class="org">SETSCO Services Pte Ltd – Singapore</div>
+              <div class="meta">ISO 15189 Accredited Laboratory</div>
+            </div>
+            <div class="meta">May 2015 – July 2025</div>
+          </div>
+          <ul>
+            <li>Performed diagnostic testing within an accredited laboratory environment.</li>
+            <li>Operated and maintained automated haematology and chemistry analysers.</li>
+            <li>Conducted analyser calibration, reagent lot validation, and troubleshooting.</li>
+            <li>Applied Westgard rules for internal QC monitoring.</li>
+            <li>Participated in EQA programmes to ensure analytical accuracy.</li>
+            <li>Contributed to audit preparation and continuous quality improvement initiatives.</li>
+          </ul>
+        </article>
 
-<section id="certs" class="section container">
-  <h2>Certifications & Status</h2>
-  <ul class="cert-list">
-    <li><strong>ASCPi Registered Medical Laboratory Scientist</strong> <span class="yr">Active</span></li>
-    <li><strong>ISO 15189 Internal Auditor</strong> <span class="yr">Experienced</span></li>
-    <li><strong>AEWV Pathway</strong> <span class="yr">Relocation-ready</span></li>
-  </ul>
-</section>
+        <article class="exp-item">
+          <div class="exp-top">
+            <div>
+              <div class="role">Senior Medical Laboratory Scientist</div>
+              <div class="org">Hi-Precision Diagnostics – Philippines</div>
+              <div class="meta">Title: Senior Medical Technologist</div>
+            </div>
+            <div class="meta">July 2011 – December 2013</div>
+          </div>
+          <ul>
+            <li>Performed a broad range of diagnostic laboratory investigations across haematology, chemistry, and core laboratory services.</li>
+            <li>Conducted full blood counts, differential counts, and peripheral smear morphology review.</li>
+            <li>Supervised junior laboratory staff and ensured adherence to quality standards.</li>
+            <li>Supported specimen processing workflows relevant to histopathology services.</li>
+            <li>Maintained accurate laboratory documentation and compliance with regulatory standards.</li>
+            <li>Supported cross-disciplinary testing in haematology and core laboratory services within a high-volume environment.</li>
+          </ul>
+        </article>
 
-<section id="contact" class="section container">
-  <h2>Contact</h2>
-  <p>Available for interviews and relocation within New Zealand.</p>
-  <div class="contact-box">
-    <a class="btn btn-primary" href="mailto:johnchristian.rodrigo@yahoo.com">johnchristian.rodrigo@yahoo.com</a>
-    <a class="btn btn-outline" target="_blank" href="https://www.linkedin.com/in/john-christian-a-rodrigo-bsmt-rmt-ascpi/">LinkedIn Profile</a>
-    <a class="btn btn-secondary" href="cv/John_Rodrigo_MedLab_NZ_Resume.pdf" download>Download CV</a>
-  </div>
-</section>
+        <article class="exp-item">
+          <div class="exp-top">
+            <div>
+              <div class="role">Medical Laboratory Scientist</div>
+              <div class="org">University of Santo Tomas Hospital – Philippines</div>
+              <div class="meta">Title: Medical Technologist · Tertiary Teaching Hospital</div>
+            </div>
+            <div class="meta">June 2007 – June 2011</div>
+          </div>
+          <ul>
+            <li>Performed tissue processing, paraffin embedding, and microtomy of surgical specimens.</li>
+            <li>Conducted routine H&amp;E staining and prepared slides for pathologist interpretation.</li>
+            <li>Ensured quality control of histological sections prior to diagnostic reporting.</li>
+            <li>Performed routine and urgent haematology and coagulation investigations.</li>
+            <li>Collaborated with clinicians and pathologists within a multidisciplinary tertiary hospital setting.</li>
+          </ul>
+        </article>
 
-<footer class="footer">
-  © <span id="year"></span> John Christian A. Rodrigo — Medical Laboratory Scientist (ASCPi)
-</footer>
+        <article class="exp-item">
+          <div class="exp-top">
+            <div>
+              <div class="role">Chief Medical Laboratory Scientist</div>
+              <div class="org">JAR Mednet – Philippines</div>
+              <div class="meta">Title: Chief Medical Technologist</div>
+            </div>
+            <div class="meta">December 2013 – May 2015</div>
+          </div>
+          <ul>
+            <li>Led daily operations of a clinical diagnostic laboratory.</li>
+            <li>Supervised laboratory personnel across multiple disciplines.</li>
+            <li>Oversaw implementation of quality control procedures and regulatory compliance.</li>
+            <li>Supported instrument acquisition and workflow optimisation initiatives.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<script src="js/main.js"></script>
+  <section id="credentials">
+    <div class="container">
+      <h2 class="section-title">Registration, Certification &amp; Education</h2>
+      <div class="grid-2">
+        <div class="panel contact-box">
+          <h3>Registration &amp; Certification</h3>
+          <ul>
+            <li>Provisionally Registered Medical Laboratory Scientist – Medical Sciences Council of New Zealand</li>
+            <li>Registered Medical Technologist – Philippines</li>
+            <li>ASCPi Certified</li>
+          </ul>
+        </div>
+        <div class="panel contact-box">
+          <h3>Education</h3>
+          <p><strong>Bachelor of Science in Medical Technology</strong></p>
+          <p>University of Santo Tomas – Manila, Philippines</p>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:18px;">
+        <h3 style="margin-top:0; color: var(--navy);">Professional Attributes</h3>
+        <div class="pill-list">
+          <span class="pill">Strong technical competence in histopathology and haematology diagnostics</span>
+          <span class="pill">Commitment to specimen integrity and patient safety</span>
+          <span class="pill">Experience in tertiary and high-volume laboratory settings</span>
+          <span class="pill">Adaptable to referral laboratories and regional hospital environments</span>
+          <span class="pill">Prepared to undertake supervised practice as required by MSCNZ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Keep this section clear and recruiter-friendly.</p>
+      <div class="grid-2">
+        <div class="panel contact-box">
+          <h3>Professional Contact</h3>
+          <p><strong>Email:</strong> <a href="mailto:johnchristian.rodrigo@yahoo.com">johnchristian.rodrigo@yahoo.com</a></p>
+          <p><strong>Mobile / WhatsApp:</strong> <a href="tel:+6582699186">+65 8269 9186</a></p>
+          <p><strong>Interview Availability:</strong> Zoom or Microsoft Teams</p>
+          <p><strong>Location:</strong> Philippines | Open to Relocation to New Zealand</p>
+        </div>
+        <div class="panel contact-box">
+          <h3>Suggested Links</h3>
+          <p><a href="https://www.linkedin.com/in/john-christian-a-rodrigo-bsmt-rmt-ascpi" target="_blank" rel="noopener">LinkedIn Profile</a></p>
+          <p><a href="John_Rodrigo_MLS_MSCNZ_CV.pdf" download>Download Current CV</a></p>
+          <p>You can also add buttons here later for certificates, portfolio items, or recommendation letters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 John Christian A. Rodrigo — Medical Laboratory Scientist (Provisional – MSCNZ)</p>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
